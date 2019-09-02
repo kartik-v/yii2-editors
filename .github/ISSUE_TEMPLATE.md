@@ -1,8 +1,8 @@
 ## Prerequisites
 
 - [ ] I have searched for similar issues in both open and closed tickets and cannot find a duplicate.
-- [ ] The issue still exists against the latest `master` branch of yii2-widget-summernote.
-- [ ] This is not an usage question. I confirm having read the [widget documentation and demos](http://demos.krajee.com/widget-details/summernote).
+- [ ] The issue still exists against the latest `master` branch of yii2-editors.
+- [ ] This is not an usage question. I confirm having read the [widget documentation and demos](http://demos.krajee.com/editors).
 - [ ] This is not a general programming / coding question. (Those should be directed to the [webtips Q & A forum](http://webtips.krajee.com/questions)).
 - [ ] This is not a source plugin (summernote) issue. (Those should be directed to the [plugin issues repo](https://github.com/summernote/summernote/search?q=&type=Issues)).
 - [ ] I have attempted to find the simplest possible steps to reproduce the issue.
@@ -39,11 +39,11 @@ Operating System
 Libraries
 
 - jQuery version:
-- yii2-widget-summernote version:
+- yii2-editors version:
 
 ## Isolating the problem
 
-- [ ] This bug happens [on the widget demos page](http://demos.krajee.com/widget-details/summernote)
+- [ ] This bug happens [on the widget demos page](http://demos.krajee.com/editors)
 - [ ] The bug happens consistently across all tested browsers
-- [ ] This bug happens when using yii2-widget-summernote without other plugins
+- [ ] This bug happens when using yii2-editors without other plugins
 - [ ] I can reproduce this bug in [a jsbin](https://jsbin.com/)

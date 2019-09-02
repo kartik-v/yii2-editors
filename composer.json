@@ -1,8 +1,22 @@
 {
-    "name": "kartik-v/yii2-widget-summernote",
-    "description": "A WYSIWYG rich text HTML output editor which uses the Summernote plugin and is styled for both Bootstrap 3.x & 4.x.",
-    "keywords": ["yii2", "extension", "widget", "input", "file", "rich", "html", "editor", "wysiwyg", "bootstrap"],
-    "homepage": "https://github.com/kartik-v/yii2-widget-summernote",
+    "name": "kartik-v/yii2-editors",
+    "description": "Editor widgets Yii2 framework. Summernote WYSIWYG editor, Codemirror code editor and PlainText editor for Bootstrap 3.x & 4.x.",
+    "keywords": [
+        "yii2",
+        "extension",
+        "widget",
+        "input",
+        "file",
+        "rich",
+        "html",
+        "editor",
+        "wysiwyg",
+        "code",
+        "codemirror",
+        "summernote",
+        "bootstrap"
+    ],
+    "homepage": "https://github.com/kartik-v/yii2-editors",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [
@@ -17,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "kartik\\summernote\\": "src"
+            "kartik\\editors\\": "src"
         }
     },
     "extra": {

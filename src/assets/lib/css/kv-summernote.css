@@ -1,0 +1,28 @@
+/*!
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2019
+ * @package yii2-editors
+ * @version 1.0.0
+ *
+ * Krajee Summernote Bootstrap CSS modifications
+ */
+.kv-editor-container {
+    height: 100%;
+    padding: 0;
+}
+.kv-editor-container > .form-control {
+    border: none;
+}
+.kv-editor-container .note-editor {
+    border: none;
+}
+.note-btn-group.note-view {
+    float: right;
+}
+.note-editor.note-frame.fullscreen {
+    border: none;
+    border-radius: 0;
+}
+.note-popover .popover-content,
+.card-header.note-toolbar {
+    background-color: rgba(0, 0, 0, .03);
+}

@@ -1,5 +1,5 @@
-Change Log: `yii2-widget-summernote`
-====================================
+Change Log: `yii2-editors`
+==========================
 
 ## Version 1.0.0
 
