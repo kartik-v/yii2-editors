@@ -10,13 +10,14 @@ namespace kartik\editors;
 
 use kartik\base\InputWidget;
 use kartik\editors\assets\CodemirrorAsset;
+use kartik\editors\assets\KrajeeCodemirrorAsset;
 use kartik\editors\assets\KrajeeSummernoteAsset;
-use kartik\editors\assets\KrajeeSummernoteEmojiAsset;
 use kartik\editors\assets\KrajeeSummernoteStyleAsset;
 use kartik\editors\assets\SummernoteAsset;
 use ReflectionException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
+use yii\helpers\Json;
 use yii\web\JsExpression;
 
 /**
@@ -152,14 +153,14 @@ class Summernote extends InputWidget
             return;
         }
         $toolView = [];
+        if ($this->enableHelp) {
+            $toolView[] = 'help';
+        }
         if ($this->enableCodeView) {
             $toolView[] = 'codeview';
         }
         if ($this->enableFullScreen) {
             $toolView[] = 'fullscreen';
-        }
-        if ($this->enableHelp) {
-            $toolView[] = 'help';
         }
         if (!empty($toolView)) {
             $this->krajeePresets['toolbar'][] = ['view', $toolView];
@@ -206,6 +207,8 @@ class Summernote extends InputWidget
         }
         if ($this->enableHintEmojis) {
             /** @noinspection RequiredAttributes */
+            /** @noinspection HtmlRequiredAltAttribute */
+            /** @noinspection HtmlUnknownTarget */
             $hint[] = [
                 'match' => new JsExpression('/:([\-+\w]+)$/'),
                 'search' => new JsExpression(
@@ -240,16 +243,12 @@ class Summernote extends InputWidget
      */
     public function getPluginScript($name, $element = null, $callback = null, $callbackCon = null)
     {
-        $script = '';
-        $id = $this->options['id'];
-        if ($this->enableHintEmojis) {
-            $script .= "kvInitEmojis();\n";
-        }
-        if ($this->enableCodeView && $this->autoFormatCode) {
-            $script .= "kvInitCMFormatter('{$id}');\n";
-        }
-        $script .= parent::getPluginScript($name, $element, $callback, $callbackCon);
-        return $script;
+        $opts = Json::encode([
+            'enableHintEmojis' => $this->enableHintEmojis,
+            'autoFormatCode' => $this->enableCodeView && $this->autoFormatCode,
+        ]);
+        $id = '$("#' . $this->options['id'] . '")';
+        return "{$id}.kvSummernote({$opts});\n" . parent::getPluginScript($name, $element, $callback, $callbackCon);
     }
 
     /**
@@ -258,9 +257,6 @@ class Summernote extends InputWidget
     public function registerAssets()
     {
         $view = $this->getView();
-        if ($this->enableHintEmojis) {
-            KrajeeSummernoteEmojiAsset::register($view);
-        }
         if ($this->enableCodeView) {
             $theme = ArrayHelper::getValue($this->pluginOptions, 'codemirror.theme', Codemirror::DEFAULT_THEME);
             if (empty($theme) || $theme === Codemirror::DEFAULT_THEME) {
@@ -268,8 +264,11 @@ class Summernote extends InputWidget
             } else {
                 CodemirrorAsset::register($view)->includeLibraries(['mode/xml/xml.js'])->addTheme($theme);
             }
-            KrajeeSummernoteAsset::register($view);
+            if ($this->autoFormatCode) {
+                KrajeeCodemirrorAsset::register($view);
+            }
         }
+        KrajeeSummernoteAsset::register($view);
         SummernoteAsset::register($view)->setLanguage($this->language);
         if ($this->useKrajeeStyle) {
             KrajeeSummernoteStyleAsset::register($view);

@@ -19,13 +19,6 @@ class KrajeeSummernoteAsset extends BaseAsset
     /**
      * @inheritdoc
      */
-    public $depends = [
-        'kartik\editors\assets\CodemirrorFormatterAsset'
-    ];
-
-    /**
-     * @inheritdoc
-     */
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/lib');

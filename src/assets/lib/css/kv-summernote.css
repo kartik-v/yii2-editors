@@ -27,3 +27,9 @@
 .card-header.note-toolbar {
     background-color: rgba(0, 0, 0, .03);
 }
+.note-toolbar .note-btn.btn-light:hover {
+    background-color: #eee;
+}
+.note-dropdown-menu blockquote, .note-dropdown-menu pre {
+    margin: 0;
+}
