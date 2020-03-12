@@ -17,16 +17,16 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Comment' => '',
-    'Copy (CTRL+C)' => '',
-    'Cut (CTRL+X)' => '',
-    'Indent' => '',
-    'Outdent' => '',
-    'Paste (CTRL+V)' => '',
-    'Pretty format' => '',
-    'Redo (CTRL+Y)' => '',
-    'Select All (CTRL+A)' => '',
-    'Toggle full screen' => '',
-    'Uncomment' => '',
-    'Undo (CTRL+Z)' => '',
+    'Comment' => 'Comentário',
+    'Copy (CTRL+C)' => 'Copiar (CTRL+C)',
+    'Cut (CTRL+X)' => 'Recortar (CTRL+X)',
+    'Indent' => 'Indentação',
+    'Outdent' => 'Desidentacao',
+    'Paste (CTRL+V)' => 'Colar (CTRL+V)',
+    'Pretty format' => 'Formato agradável',
+    'Redo (CTRL+Y)' => 'Refazer (CTRL+Y)',
+    'Select All (CTRL+A)' => 'Selecionar tudo (CTRL+A)',
+    'Toggle full screen' => 'Alternar para o modo tela cheia',
+    'Uncomment' => 'Descomentar',
+    'Undo (CTRL+Z)' => 'Desfazer (CTRL+Z)',
 ];

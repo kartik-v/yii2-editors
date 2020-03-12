@@ -19,7 +19,7 @@ class CodemirrorAsset extends BaseAsset
     /**
      * @inheritdoc
      */
-    public $baseUrl = '//cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4';
+    public $baseUrl = '//cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.0';
 
     /**
      * @inheritdoc
