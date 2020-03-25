@@ -79,7 +79,7 @@
         this.each(function () {
             var self = $(this), data = self.data('kvSummernote'), options = typeof option === 'object' && option, opt;
             if (!data) {
-                opt = $.extend(true, {}, $.fn.fileinput.defaults, options, self.data());
+                opt = $.extend(true, {}, $.fn.kvSummernote.defaults, options, self.data());
                 data = new KvSummernote(this, opt);
                 self.data('kvSummernote', data);
             }
