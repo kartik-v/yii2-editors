@@ -37,6 +37,11 @@ class Summernote extends InputWidget
     public $pluginName = 'summernote';
 
     /**
+     * @var bool whether to use styles with span
+     */
+    public $styleWithSpan = false;
+
+    /**
      * @var bool whether to use Krajee presets for toolbar and other plugin settings. You can override these through
      * plugin options;
      */
@@ -133,6 +138,9 @@ class Summernote extends InputWidget
         $this->initLanguage('lang', true);
         if (!empty($this->options['placeholder']) && empty($this->pluginOptions['placeholder'])) {
             $this->pluginOptions['placeholder'] = $this->options['placeholder'];
+        }
+        if (!isset($this->pluginOptions['styleWithSpan'])) {
+            $this->pluginOptions['styleWithSpan'] = $this->styleWithSpan;
         }
         $tag = ArrayHelper::remove($this->container, 'tag', 'div');
         if (!isset($this->container['id'])) {
