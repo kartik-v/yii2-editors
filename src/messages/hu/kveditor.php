@@ -17,16 +17,16 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Comment' => '',
-    'Copy (CTRL+C)' => '',
-    'Cut (CTRL+X)' => '',
-    'Indent' => '',
-    'Outdent' => '',
-    'Paste (CTRL+V)' => '',
-    'Pretty format' => '',
-    'Redo (CTRL+Y)' => '',
-    'Select All (CTRL+A)' => '',
-    'Toggle full screen' => '',
-    'Uncomment' => '',
-    'Undo (CTRL+Z)' => '',
+    'Comment' => 'Megjegyzés',
+    'Copy (CTRL+C)' => 'Másolás',
+    'Cut (CTRL+X)' => 'Kivágás',
+    'Indent' => 'Behúzás',
+    'Outdent' => 'Behúzás csökkentése',
+    'Paste (CTRL+V)' => 'Beillesztés',
+    'Pretty format' => 'Szép formázás',
+    'Redo (CTRL+Y)' => 'Újra',
+    'Select All (CTRL+A)' => 'Összes kijelölése',
+    'Toggle full screen' => 'Teljes képernyős mód váltása',
+    'Uncomment' => 'Megjegyzés visszavonása',
+    'Undo (CTRL+Z)' => 'Visszavonás',
 ];
