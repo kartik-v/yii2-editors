@@ -1,5 +1,5 @@
 /*!
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2020
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
  * @package yii2-editors
  * @version 1.0.0
  *
@@ -33,7 +33,8 @@
     KvSummernote.prototype = {
         constructor: KvSummernote,
         init: function () {
-            var self = this, $el = self.$element, opts = self.options, $form = $el.closest('form');
+            var self = this, $el = self.$element, opts = self.options, $form = $el.closest('form'),
+                initVal = $el.val();
             if (opts.enableHintEmojis) {
                 self.initEmojis();
             }
@@ -45,6 +46,7 @@
             if ($form && $form.length) {
                 $form.on('reset', function () {
                     $el.summernote('reset');
+                    $el.summernote('code', initVal);
                 });
             }
         },

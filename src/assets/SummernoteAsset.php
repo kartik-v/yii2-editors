@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2020
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
  * @package yii2-editors
- * @version 1.0.1
+ * @version 1.0.0
  */
 
 namespace kartik\editors\assets;
@@ -21,7 +21,7 @@ class SummernoteAsset extends BaseAsset
     /**
      * @inheritdoc
      */
-    public $baseUrl = '//cdn.jsdelivr.net/npm/summernote@0.8.16/dist';
+    public $baseUrl = '//cdn.jsdelivr.net/npm/summernote@0.8.18/dist';
 
     /**
      * @inheritdoc

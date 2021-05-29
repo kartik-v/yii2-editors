@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2020
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
  * @package yii2-editors
- * @version 1.0.1
+ * @version 1.0.0
  */
 
 namespace kartik\editors;
@@ -93,7 +93,7 @@ class Summernote extends InputWidget
      * attributes are recognized:
      * - `tag`: _string_, the HTML tag used for rendering the container. Defaults to `div`.
      */
-    public $container = ['class' => 'form-control kv-editor-container'];
+    public $container = [];
 
     /**
      * @var array default Krajee presets for the summernote plugin
@@ -145,6 +145,9 @@ class Summernote extends InputWidget
         $tag = ArrayHelper::remove($this->container, 'tag', 'div');
         if (!isset($this->container['id'])) {
             $this->container['id'] = $this->options['id'] . '-container';
+        }
+        if (!isset($this->container['class'])) {
+            $this->container['class'] = 'form-control kv-editor-container';
         }
         $this->initKrajeePresets();
         $this->initHints();

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2020
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
  * @package yii2-editors
- * @version 1.0.1
+ * @version 1.0.0
  */
 
 namespace kartik\editors;
@@ -39,7 +39,7 @@ class Codemirror extends InputWidget
     const DEFAULT_THEME = 'default';
 
     /**
-     * @var string|null|false the preset configurations to use. See the PRESET constants. This will be merged with
+     * @var string|null|false the name of the preset to use. See the PRESET constants. This will be merged with
      * Krajee preset settings when [[useKrajeePresets]] is set to true). Set this to null or false if you do not want
      * any preset. You can also set a preset and override the settings in `pluginOptions`.
      */
@@ -57,7 +57,7 @@ class Codemirror extends InputWidget
     public $useKrajeePresets = true;
 
     /**
-     * @var bool whether to enable and display button for formatting code
+     * @var bool whether to enable the toolbar button for pretty formatting code
      */
     public $enablePrettyFormat = true;
 
@@ -85,7 +85,7 @@ class Codemirror extends InputWidget
      * attributes are recognized:
      * - `tag`: _string_, the HTML tag used for rendering the container. Defaults to `div`.
      */
-    public $container = ['class' => 'form-control kv-code-container'];
+    public $container = [];
 
     /**
      * @var array the toolbar configuration
@@ -116,12 +116,12 @@ class Codemirror extends InputWidget
     public $buttons = [];
 
     /**
-     * @var array default button css class
+     * @var array HTML attributes for the toolbar buttons that will be globally applied.
      */
     public $buttonOptions = ['class' => 'btn btn-default btn-light', 'data-tooltips' => 'true'];
 
     /**
-     * @var array default button css class
+     * @var array HTML attributes for the toolbar button groups that will be globally applied.
      */
     public $buttonGroupOptions = ['class' => 'btn-group mr-2', 'role' => 'group'];
 
@@ -155,6 +155,9 @@ class Codemirror extends InputWidget
         $tag = ArrayHelper::remove($this->container, 'tag', 'div');
         if (!isset($this->container['id'])) {
             $this->container['id'] = $this->options['id'] . '-container';
+        }
+        if (!isset($this->container['class'])) {
+            $this->container['class'] = 'form-control kv-code-container';
         }
         $this->initButtons();
         $toolbar = $this->renderToolbar();
