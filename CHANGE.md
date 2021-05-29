@@ -5,6 +5,7 @@ Change Log: `yii2-editors`
 
 **Date:** 29-May-2021
 
+- (enh #11): Enhance and customize summernote plugin to support Krajee PJAX reinitialization.
 - (enh #7): Add Hungarian translations.
 - (enh #6): Enable styleWithSpan default for Summernote.
 - (bug #3): Correct defaults in summernote plugin init.

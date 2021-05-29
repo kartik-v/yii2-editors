@@ -27,13 +27,15 @@
         var self = this;
         self.$element = $(element);
         self.options = options;
+        self.customOptions = $.extend(true, {}, options.customOptions);
+        delete (self.options.customOptions);
         self.init();
     };
     //noinspection JSUnusedGlobalSymbols
     KvSummernote.prototype = {
         constructor: KvSummernote,
         init: function () {
-            var self = this, $el = self.$element, opts = self.options, $form = $el.closest('form'),
+            var self = this, $el = self.$element, opts = self.customOptions, $form = $el.closest('form'),
                 initVal = $el.val();
             if (opts.enableHintEmojis) {
                 self.initEmojis();
@@ -49,6 +51,11 @@
                     $el.summernote('code', initVal);
                 });
             }
+            $el.summernote(self.options);
+        },
+        destroy: function () {
+            var self = this;
+            self.$element.summernote('destroy');
         },
         formatCode: function () {
             var self = this, $code = self.$element.next().find('textarea.note-codable'),

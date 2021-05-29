@@ -34,7 +34,7 @@ class Summernote extends InputWidget
     /**
      * @inheritdoc
      */
-    public $pluginName = 'summernote';
+    public $pluginName = 'kvSummernote';
 
     /**
      * @var bool whether to use styles with span
@@ -247,19 +247,10 @@ class Summernote extends InputWidget
             ];
         }
         $this->pluginOptions['hint'] = $hint;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getPluginScript($name, $element = null, $callback = null, $callbackCon = null)
-    {
-        $opts = Json::encode([
+        $this->pluginOptions['customOptions'] = [
             'enableHintEmojis' => $this->enableHintEmojis,
             'autoFormatCode' => $this->enableCodeView && $this->autoFormatCode,
-        ]);
-        $id = '$("#' . $this->options['id'] . '")';
-        return "{$id}.kvSummernote({$opts});\n" . parent::getPluginScript($name, $element, $callback, $callbackCon);
+        ];
     }
 
     /**

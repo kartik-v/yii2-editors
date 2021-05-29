@@ -289,51 +289,51 @@ class Codemirror extends InputWidget
     {
         $this->defaultButtons = [
             'undo' => [
-                'label' => '<i class="fa fa-undo"></i>',
+                'label' => '<i class="fas fa-undo"></i>',
                 'title' => Yii::t('kveditor', 'Undo (CTRL+Z)'),
             ],
             'redo' => [
-                'label' => '<i class="fa fa-redo"></i>',
+                'label' => '<i class="fas fa-redo"></i>',
                 'title' => Yii::t('kveditor', 'Redo (CTRL+Y)'),
             ],
             'selectall' => [
-                'label' => '<i class="fa fa-check-double"></i>',
+                'label' => '<i class="fas fa-check-double"></i>',
                 'title' => Yii::t('kveditor', 'Select All (CTRL+A)'),
             ],
             'copy' => [
-                'label' => '<i class="fa fa-copy"></i>',
+                'label' => '<i class="fas fa-copy"></i>',
                 'title' => Yii::t('kveditor', 'Copy (CTRL+C)'),
             ],
             'cut' => [
-                'label' => '<i class="fa fa-cut"></i>',
+                'label' => '<i class="fas fa-cut"></i>',
                 'title' => Yii::t('kveditor', 'Cut (CTRL+X)'),
             ],
             'paste' => [
-                'label' => '<i class="fa fa-paste"></i>',
+                'label' => '<i class="fas fa-paste"></i>',
                 'title' => Yii::t('kveditor', 'Paste (CTRL+V)'),
             ],
             'format' => [
-                'label' => '<i class="fa fa-code"></i>',
+                'label' => '<i class="fas fa-code"></i>',
                 'title' => Yii::t('kveditor', 'Pretty format'),
             ],
             'indent' => [
-                'label' => '<i class="fa fa-indent"></i>',
+                'label' => '<i class="fas fa-indent"></i>',
                 'title' => Yii::t('kveditor', 'Indent'),
             ],
             'outdent' => [
-                'label' => '<i class="fa fa-outdent"></i>',
+                'label' => '<i class="fas fa-outdent"></i>',
                 'title' => Yii::t('kveditor', 'Outdent'),
             ],
             'comment' => [
-                'label' => '<i class="fa fa-comment"></i>',
+                'label' => '<i class="fas fa-comment"></i>',
                 'title' => Yii::t('kveditor', 'Comment'),
             ],
             'uncomment' => [
-                'label' => '<i class="fa fa-comment-slash"></i>',
+                'label' => '<i class="fas fa-comment-slash"></i>',
                 'title' => Yii::t('kveditor', 'Uncomment'),
             ],
             'fullscreen' => [
-                'label' => '<i class="fa fa-expand-arrows-alt"></i>',
+                'label' => '<i class="fas fa-expand-arrows-alt"></i>',
                 'title' => Yii::t('kveditor', 'Toggle full screen'),
             ],
         ];
