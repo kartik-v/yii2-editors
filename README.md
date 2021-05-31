@@ -135,7 +135,6 @@ echo Codemirror::widget([
     'value' => '',
     'preset' => Codemirror::PRESET_JS,
     'useKrajeePresets' => true,
-    'modes' => ['xml', 'javascript', 'css'],
     'libraries' => [
         'addon/display/placeholder.js',
         'addon/fold/xml-fold.js',
@@ -144,6 +143,9 @@ echo Codemirror::widget([
         'addon/selection/active-line.js',
         'addon/selection/selection-pointer.js',
     ],
+    'pluginOptions' => [
+        'modes' => ['xml', 'javascript', 'css'],
+    ]
 ]);
 ```
 
