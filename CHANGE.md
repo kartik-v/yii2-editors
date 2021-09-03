@@ -1,6 +1,12 @@
 Change Log: `yii2-editors`
 ==========================
 
+## version 1.0.1
+
+**Date:** 03-Sep-2021
+
+- (enh #13): Enhancements to support Bootstrap v5.x.
+
 ## version 1.0.0
 
 **Date:** 29-May-2021

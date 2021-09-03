@@ -3,7 +3,7 @@
 /**
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
  * @package yii2-editors
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 namespace kartik\editors\assets;
@@ -28,7 +28,7 @@ class SummernoteAsset extends BaseAsset
      */
     public function init()
     {
-        $asset = $this->isBs4() ? 'summernote-bs4' : 'summernote';
+        $asset = !$this->isBs(3) ? 'summernote-bs4' : 'summernote';
         $this->setupAssets('css', [$asset]);
         $this->setupAssets('js', [$asset]);
         parent::init();

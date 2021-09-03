@@ -9,27 +9,22 @@
 namespace kartik\editors\assets;
 
 /**
- * Asset bundle for Krajee Bootstrap CSS Modifications to Summernote Widget.
+ * Asset bundle for Summernote Bootstrap 5.x styling
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class KrajeeSummernoteStyleAsset extends BaseAsset
+class SummernoteBs5Asset extends BaseAsset
 {
-    /**
-     * @inheritdoc
-     */
-    public $depends = [
-        'kartik\editors\assets\SummernoteAsset'
-    ];
-
     /**
      * @inheritdoc
      */
     public function init()
     {
+        $this->addDependency(SummernoteAsset::class);
         $this->setSourcePath(__DIR__ . '/lib');
-        $this->setupAssets('css', ['css/kv-summernote']);
+        $this->setupAssets('js', ['js/kv-summernote-bs5']);
+        $this->setupAssets('css', ['css/kv-summernote-bs5']);
         parent::init();
     }
 }

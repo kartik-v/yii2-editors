@@ -1,6 +1,6 @@
 {
     "name": "kartik-v/yii2-editors",
-    "description": "Editor widgets Yii2 framework. Summernote WYSIWYG editor, Codemirror code editor and PlainText editor for Bootstrap 3.x & 4.x.",
+    "description": "Editor widgets Yii2 framework. Summernote WYSIWYG editor, Codemirror code editor and PlainText editor for Bootstrap 3.x, 4.x and 5.x.",
     "keywords": [
         "yii2",
         "extension",
@@ -27,7 +27,7 @@
         }
     ],
     "require": {
-        "kartik-v/yii2-krajee-base": ">=2.0.0"
+        "kartik-v/yii2-krajee-base": ">=3.0.0"
     },
     "autoload": {
         "psr-4": {

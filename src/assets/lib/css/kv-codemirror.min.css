@@ -1,7 +1,7 @@
 /*!
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
  * @package yii2-editors
- * @version 1.0.0
+ * @version 1.0.1
  *
  * Krajee Codemirror CSS modifications
  */.kv-code-container{height:100%;padding:0;border-radius:0}.kv-code-container>.form-control{border:none}.kv-code-container .btn-toolbar{margin:0;padding:1px;background-color:rgba(0,0,0,.03);border-bottom:1px solid #ddd}.kv-cm-container.fullscreen{border:none;background-color:#fff;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1050}.kv-cm-container.fullscreen .CodeMirror{height:100%!important}

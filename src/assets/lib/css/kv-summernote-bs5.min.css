@@ -1,0 +1,7 @@
+/*!
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
+ * @package yii2-editors
+ * @version 1.0.1
+ *
+ * Krajee Summernote Bootstrap 5.x CSS modifications
+ */.kv-editor-container .modal-header .close{padding:1rem;margin:-1rem -1rem -1rem auto;background-color:transparent;border:0;float:right;font-size:1.5rem;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.5}.kv-editor-container .modal-header .close:hover{opacity:1}.kv-editor-container .form-group{margin-bottom:1rem}.kv-editor-container .form-group label{margin-bottom:.5rem}
