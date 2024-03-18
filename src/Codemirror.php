@@ -95,7 +95,7 @@ class Codemirror extends InputWidget
         'edit' => ['buttons' => ['copy', 'cut', 'paste']],
         'format' => ['buttons' => ['indent', 'outdent', 'format']],
         'comment' => ['buttons' => ['comment', 'uncomment']],
-        'view' => ['buttons' => ['fullscreen'], 'options' => ['class' => 'pull-right ml-auto']],
+        'view' => ['options' => ['class' => 'pull-right ml-auto']],
     ];
 
     /**
@@ -153,12 +153,6 @@ class Codemirror extends InputWidget
         $this->initPresets();
         $this->registerAssets();
         $tag = ArrayHelper::remove($this->container, 'tag', 'div');
-        if (!isset($this->container['id'])) {
-            $this->container['id'] = $this->options['id'] . '-container';
-        }
-        if (!isset($this->container['class'])) {
-            $this->container['class'] = 'form-control kv-code-container';
-        }
         $this->initButtons();
         $toolbar = $this->renderToolbar();
         if (empty($this->options['class'])) {
@@ -422,3 +416,4 @@ class Codemirror extends InputWidget
         $this->registerPlugin($this->pluginName);
     }
 }
+
